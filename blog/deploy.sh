@@ -12,7 +12,7 @@ mkdir public
 rm -rf .git/worktrees/public/
 
 echo "Checking out gh-pages branch into public"
-git worktree add -B gh-pages public github/gh-pages
+git worktree add -B gh-pages public
 
 echo "Removing existing files"
 rm -rf public/*
@@ -24,4 +24,4 @@ echo "Updating gh-pages branch"
 cd public && git add --all && git commit -m "Publishing to gh-pages (publish.sh)"
 
 echo "Push to github"
-git push origin -u gh-pages
+git push origin gh-pages
